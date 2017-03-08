@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Pesquisa</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<header>
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button data-target="#header-menu" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand value-brand">Huli</a>
+            </div>
+            <div class="collapse navbar-collapse" id="header-menu">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>                
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+	            <li>
+	              <a href=#>
+	                <span data-toggle="tooltip" data-placement="bottom" data-container="body" >login</span>
+	              </a>
+	            </li>
+	            
+	            
+	            <li>
+	              <a href="#">
+	                <span data-toggle="tooltip" data-placement="bottom" data-container="body">
+	                  <span class="glyphicon glyphicon-cog"></span>
+	                </span>
+	              </a>
+	            </li>
+	            <li>
+	              <a href="#">
+	                <span data-toggle="tooltip" data-placement="bottom" data-container="body">
+	                  <span class="glyphicon glyphicon-log-out"></span>
+	                </span>
+	              </a>
+	            </li>
+	          </ul>
+              
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <div class="container">
+
+	    <div class="panel panel-default">
+	        
+	        <div class="panel-heading">
+	        	<h1 class="panel-title text-center">Mapeamento Sistemático</h1>
+		    </div>
+		    
+		    <div class="panel-body">
+
+			  <div class="form-group">
+			    <label for="id_title" class="control-label">Título</label>
+			    <input class="form-control" id="id_title" maxlength="255" name="title" type="text">    
+			  </div>
+
+			  <div class="form-group">
+			    <label for="id_description" class="control-label">Descrição</label>
+			    <div class="expanding-wrapper" style="position:relative">
+			    <textarea class="form-control expanding" cols="40" id="id_description" maxlength="500" name="description" rows="4" style="margin: 0px; box-sizing: border-box; width: 100%; position: absolute; top: 0px; left: 0px; height: 100%; resize: none; overflow: auto;">  	
+			    </textarea><pre class="expanding-clone" style="margin: 0px; box-sizing: border-box; width: 100%; display: block; border: 1px solid; visibility: hidden; min-height: 90px; white-space: pre-wrap; line-height: 20px; font-size: 14px;"><br></pre></div>
+			  </div>
+
+			</div>
+
+			<div class="panel-heading">
+	        	<h1 class="panel-title ">Objetivos</h1>
+		    </div>
+
+		    <div class="panel-body">
+
+			  <div class="form-group">
+			    <div class="expanding-wrapper" style="position:relative">
+			    <textarea class="form-control expanding" cols="40" id="id_description" maxlength="500" name="description" rows="4" style="margin: 0px; box-sizing: border-box; width: 100%; position: absolute; top: 0px; left: 0px; height: 100%; resize: none; overflow: auto;">  	
+			    </textarea><pre class="expanding-clone" style="margin: 0px; box-sizing: border-box; width: 100%; display: block; border: 1px solid; visibility: hidden; min-height: 90px; white-space: pre-wrap; line-height: 20px; font-size: 14px;"><br></pre></div>
+			  </div>
+
+			</div>
+
+
+
+			<div class="panel-heading">
+	        	<h1 class="panel-title ">Questões de Pesquisa</h1>
+		    </div>
+
+		    <div class="panel-body">
+
+			  	<div class="form-group">
+			    
+				  	<table class="table">
+						<tr>
+						<td style="vertical-align: middle;" colspan="2">
+						    <input class="form-control" type="text" name="question-description" maxlength="500" value="">
+						</td>
+
+						<td style="width: 180px; text-align: right; vertical-align: middle;">
+						   	<button type="button" class="btn btn-sm btn-primary btn-cancel-question">
+						      adicionar
+						   	</button>
+
+						    <button type="button" class="btn btn-sm btn-danger btn-cancel-question">
+						      remover
+						    </button>
+						  </td>
+						</tr>
+					</table>
+
+			  </div>
+			</div>
+
+            <div class="panel-heading">
+	            <h3 class="panel-title">Seleção de Critérios</h3>
+	        </div>
+	        <div class="panel-body">
+	            <div class="row">
+	              <div class="col-sm-6">
+	                <div class="form-group">
+	                  <label for="inclusao" class="control-label">Critério de inclusão</label>
+	                  <input type="text" id="inclusao" maxlength="200" class="form-control">
+	                </div>
+	                <div class="form-group">
+	                  <select multiple="multiple" size="6" id="criterio-inclusao" class="form-control">
+	                    
+	                  </select>                  
+	                </div>
+	                <button type="button" class="btn btn-danger btn-sm" data-target="#criterio-inclusao">
+	                  <span class="glyphicon glyphicon-trash"></span>
+	                  remover critério
+	                </button>
+	              </div>
+	              <div class="col-sm-6">
+	                <div class="form-group">
+	                  <label for="exclusao" class="control-label">Critério de exclusão</label>
+	                  <input type="text" id="exclusao" maxlength="200" class="form-control">
+	                </div>
+	                <div class="form-group">
+	                  <select multiple="multiple" size="6" id="criterio-exclusao" class="form-control">
+	                    
+	                  </select>
+	                </div>
+	                <button type="button" class="btn btn-danger btn-sm" data-target="#criterio-exclusao">
+	                  <span class="glyphicon glyphicon-trash"></span>
+	                  remover critério
+	                </button>
+	              </div>
+	            </div>
+	        </div>
+
+
+
+
+
+
+
+
+   		</div>
+    </div>
+
+</body>
+</html>
